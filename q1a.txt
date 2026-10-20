@@ -1,0 +1,2 @@
+With the x-axis pointing right and the y-axis pointing down, increasing θ performs a clockwise rotation.
+With the y-axis pointing up, increasing θ performs a counterclockwise rotation.

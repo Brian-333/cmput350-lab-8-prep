@@ -1,0 +1,22 @@
+2.1
+    First triangle: (200, 150), (200, 450), (600, 150)
+    Second triangle: (600, 150), (200, 450), (600, 450)
+
+2.2
+    Instead of 2 buffers of vertices i.e. storing 48 bytes for 12 numbers, 8 bytes for each vertex
+
+    All vertex should be store in one buffer such that it takes only 32 bytes for 8 numbers
+    and use another 2 buffers/1 buffer for each triangle/triangles using the index of first buffer of 3 numbers each buffer and that makes 24 bytes total
+    This makes total of 56 bytes which is more than 48 bytes.
+
+    In this case the first method was more memory efficient and has a faster access rate.
+
+    If vertices are stored as double then first method would have 96 (8 * 12) bytes, 
+    and 2nd method would have 8 bytes * 8 doubles in vertices + 4 bytes * 6 indices = 64 + 24 = 88 bytes
+    which is a lot less than first method.
+    With double, the 2nd method is more memory efficient but need more access time with the indices
+
+    With float, first method is better. With double, 2nd method is better
+
+2.3
+    normalize (500, 301) in the rectangle => (0.75, 151/300)
